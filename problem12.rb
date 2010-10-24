@@ -17,6 +17,7 @@
 #What is the value of the first triangle number to have over five hundred divisors?
 require 'mathn'
 
+
 def numDivisors(val)
     Prime.prime_division(val).map{|result| result[1]}.inject(1){|numdivisors, primefactor| numdivisors *= primefactor+1}
 end
